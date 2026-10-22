@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+*.safetensors
+*.pt
+*.pth
+*.distcp
+*.mp4
+*.parquet
+*.npy
+.env

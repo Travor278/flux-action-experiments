@@ -1,0 +1,29 @@
+{
+  "benchmark": "RoboTwin 2.0",
+  "embodiment": "aloha-agilex",
+  "dataset": "demo_clean",
+  "tasks": {
+    "click_bell": "single active arm per episode; dual-arm scene",
+    "handover_block": "bimanual handover"
+  },
+  "train_episodes_per_task": 50,
+  "train_seed": 42,
+  "train_steps": 3000,
+  "global_batch": 32,
+  "eval_episodes_per_task": 100,
+  "eval_seed": 0,
+  "eval_seed_start": 100000,
+  "eval_instruction": "seen",
+  "eval_max_steps": {
+    "click_bell": 400,
+    "handover_block": 800
+  },
+  "eval_workers": 1,
+  "eval_seed_rule": "upstream expert-filtered valid scenes; save and compare accepted seed lists across policies",
+  "checkpoint_selection": "final step 3000, ema_0p10; no test-set selection",
+  "comparison": "rerun pi05 on identical source revision, episodes, cameras, action convention and accepted eval seeds",
+  "limitation": "Aloha-AgileX results are not PiperX results; published pi05 scores are contextual until full protocol matches",
+  "flux_git": "830f1ce178d7aea52f18fde31d8e8e36ce6bae21",
+  "robotwin_git": "ea8b21121ebb3cd201ff5b3fe361944ac94eda3f",
+  "xpolicylab_git": "53c5da5a01bc720d1cf0e6ab6ed212e8cef0eda2"
+}

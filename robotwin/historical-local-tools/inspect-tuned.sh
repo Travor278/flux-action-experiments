@@ -1,0 +1,2 @@
+B=/workspace/hdd/codex_remote_ops/flux_piperx_20261008
+{ ps -p $(cat "$B/status/download.pid") -o pid,etime,pcpu,args; stat "$B/status/download.log"; tail -c 1000 "$B/status/download.log"; } > "$B/status/download-tuned-inspect.txt"

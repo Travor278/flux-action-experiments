@@ -1,0 +1,2 @@
+B=/workspace/hdd/codex_remote_ops/flux_piperx_20261008
+{ ps -p $(cat "$B/status/expert-smoke.pid") -o pid,ppid,etime,pcpu,pmem,wchan,args; ps --ppid $(cat "$B/status/expert-smoke.pid") -o pid,ppid,etime,pcpu,pmem,wchan,args; nvidia-smi --query-gpu=memory.used,utilization.gpu --format=csv; } > "$B/status/expert-process.txt"

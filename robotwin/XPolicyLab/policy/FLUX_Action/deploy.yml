@@ -1,0 +1,15 @@
+policy_name: FLUX_Action
+protocol: ws
+host: localhost
+port: null
+bench_name: null
+task_name: null
+ckpt_name: null
+env_cfg_type: null
+seed: null
+action_type: null
+gpu_id: null
+eval_batch: false
+device: cuda
+execute_steps: 16
+request_timeout_s: 300

@@ -1,0 +1,2 @@
+B=/workspace/hdd/codex_remote_ops/flux_piperx_20261008
+{ command -v nvcc || true; nvcc --version 2>/dev/null || true; ls -d /usr/local/cuda* 2>/dev/null || true; command -v gcc g++ ninja || true; df -h "$B"; } > "$B/status/cuda-build-tools.txt"

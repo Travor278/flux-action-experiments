@@ -1,0 +1,72 @@
+{
+  "source_root": "/workspace/hdd/codex_remote_ops/flux_piperx_20261008/assets/lerobot/handover_block",
+  "index_dir": "/workspace/hdd/codex_remote_ops/flux_piperx_20261008/assets/index/handover_block",
+  "output_dir": "/workspace/ssd/codex_remote_ops/flux_piperx_20261008/runs/handover_block",
+  "steps": 3000,
+  "cooldown_start": 2500,
+  "cooldown_steps": 500,
+  "frozen_steps": 200,
+  "trunk_warmup_steps": 600,
+  "heads_warmup_steps": 200,
+  "seed": 42,
+  "reseed_on_resume": false,
+  "windows_per_rank": 1,
+  "grad_accumulation": 8,
+  "num_workers": 2,
+  "visits_per_epoch": 64,
+  "decoder": "pyav",
+  "frame_hw": [
+    240,
+    320
+  ],
+  "shard_size": 4,
+  "param_dtype": "float32",
+  "compute_dtype": "bfloat16",
+  "reduce_dtype": "float32",
+  "activation_checkpointing": true,
+  "reshard_after_forward": true,
+  "fused_optimizer": true,
+  "max_grad_norm": 1.0,
+  "ema_sigma_rels": [
+    0.1,
+    0.05
+  ],
+  "checkpoint_every": 1000,
+  "keep_checkpoints": 1,
+  "keep_every": null,
+  "log_every": 10,
+  "resume": "auto",
+  "policy": {
+    "trunk_weights": "/workspace/hdd/codex_remote_ops/flux_piperx_20261008/assets/flux-base/flux-3-action-base.safetensors",
+    "video_vae_id": "/workspace/hdd/codex_remote_ops/flux_piperx_20261008/assets/flux-base/video_vae.safetensors",
+    "text_encoder_id": "/workspace/hdd/codex_remote_ops/flux_piperx_20261008/assets/flux-base/text_encoder",
+    "action_dim": 14,
+    "action_modality": "action_robotwin",
+    "action_parameterization": "absolute",
+    "gripper_flip_dims": [],
+    "camera_layout": "grid",
+    "camera_keys": [
+      "images.head",
+      "images.left_wrist",
+      "images.right_wrist"
+    ],
+    "canvas_hw": [
+      480,
+      640
+    ],
+    "chunk_size": 32,
+    "n_action_steps": 16,
+    "fps": 15.0,
+    "attn_mode": "torch",
+    "compile_model": false,
+    "vae_batch_windows": 1,
+    "optimizer_lr": 1e-05,
+    "optimizer_lr_heads_multiplier": 5.0,
+    "augment": false,
+    "sampler": "euler",
+    "num_inference_steps": 4,
+    "sampler_shift": 5.0,
+    "guidance_scale": 3.0,
+    "guidance_scale_action": 1.0
+  }
+}
