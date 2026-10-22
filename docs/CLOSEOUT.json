@@ -1,0 +1,18 @@
+{
+  "closed_date": "2026-10-22",
+  "repository": "https://github.com/Travor278/flux-action-experiments",
+  "source_archive_commit": "4fc62916a4647e7220be6d567f5233714b17db60",
+  "source_records_verified": 822,
+  "github_actions": "https://github.com/Travor278/flux-action-experiments/actions/runs/39786738683",
+  "remote_cleanup": {
+    "all_four_scoped_hdd_ssd_experiment_roots_absent": true,
+    "robodojo_roots_already_absent_before_cleanup": true,
+    "remaining_robotwin_flux_apparent_bytes_removed": 42536523178,
+    "closeout_temporary_directory_removed": true,
+    "cross_experiment_references_or_active_processes_found": false
+  },
+  "training_monitor_deleted": true,
+  "no_new_training_or_evaluation_will_be_started": true,
+  "weights_and_datasets_in_repository": false,
+  "known_limit": "RoboDojo remote directories were absent before source collection; local retained source is archived and exact missing remote-only config bytes are not fabricated."
+}
